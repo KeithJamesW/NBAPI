@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Top 20 Dynamic Cards</title>
+    <link rel="stylesheet" href="/static/players.css"> 
+</head>
+<body>
+   
+              {% for results in listed_results %}
+<div id="flip-container">
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-back">
+              
+        <ul>
+                    
+               
+          <li> Points Per Game : {{results[3][0]}}</li>
+          <li> Assists Per Game : {{results[3][1]}}</li>
+          <li> Rebounds Per Game : {{results[3][2]}}</li>
+          <li> Blocks Per Game : {{results[3][3]}}</li>
+          <li> Field Goal % : {{results[3][4]}}</li>
+                
+                
+        </ul>
+              
+        <a href="https://www.google.com/search?q={{results[1][1]}}+{{results[1][2]}}&oq={{results[1][2]}}+{{[1][2]}}&aqs=chrome.0.69i59j46i433i512j0i433i512l5j69i61.6390j0j4&sourceid=chrome&ie=UTF-8">
+          <button>Read more</button>
+        </a>
+        
+      </div>
+            
+        <div class="flip-card-front">
+              
+          <img src="https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/{{results[2][1]}}.png" alt="">
+          
+          <div class="card__details">
+            <div class="name">{{results[1][1]}} {{results[1][2]}}</div>
+              <hr>
+                <ul>
+                    
+               
+                  <li> Height : {{results[1][3]}}'{{results[1][4]}}</li>
+                  <li> Weight : {{results[1][5]}}</li>
+                  <li> Position : {{results[1][6]}}</li>
+                      
+  
+                 
+                  <li>Team : {{results[0][0]}}</li>
+                  <li>Conference : {{results[0][1]}}</li>
+                  <li>Division : {{results[0][2]}}</li>
+                  
+                </ul>
+                
+                  
+                  
+                  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+                        {% endfor %}
+
+
+</body>
+</html>

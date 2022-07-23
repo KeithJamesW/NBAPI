@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500;600&display=swap");
+
+img {
+  width: 100%;
+  border-radius: 12px;
+  height: 214px;
+  object-fit: cover;
+}
+
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-image: url('https://wallpapercave.com/wp/7Ce5VWu.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+
+#container {
+  max-width: 300px;
+  margin-top: 10vh;
+  display: inline-block;
+}
+
+
+.card {
+  background-color: white;
+  border: 1px solid #bacdd8;
+  padding: 8px;
+  margin-left: 4em;
+  border-radius: 12px;
+  
+}
+
+
+.tag {
+  padding: 4px 8px;
+  border: 1px solid #e5eaed;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #788697;
+}
+
+
+.name {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 16px;
+  
+}
+
+
+li, .flip-card-front li {
+  font-size: 10px;
+}
+
+
+p {
+  font-size: 14px;
+  color: #7f8c9b;
+  line-height: 150%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  color: #0077ff;
+  background-color: #e0efff;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+.card__details {
+  padding: 16px 8px 8px 8px;
+}
+
+
+#flip-container {
+  max-width: 300px;
+  max-height: 400px;
+  margin-top: 10vh;
+  display: inline-block;
+}
+
+
+.flip-card-inner {
+  background-color: white;
+  border: 1px solid #bacdd8;
+  padding: 8px;
+  margin-left: 4em;
+  border-radius: 12px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+
+.flip-card-front, .flip-card-back {
+-webkit-backface-visibility: hidden; 
+backface-visibility: hidden;
+}
+
+
+.flip-card-front {
+  background-color: white;
+  color: black;
+}
+
+
+.flip-card-back {
+  padding: 16px 8px 8px 8px;
+  max-width: 300px;
+  position: absolute;
+  left: 1em;
+  background-color: white;
+  color: black;
+  transform: rotateY(180deg);
+}
+
+
+.flip-card-back li {
+  font-size: 14px;
+}
+
+
+.flip-card-back button{
+  top: 1em;
+}

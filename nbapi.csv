@@ -1,0 +1,21 @@
+id,first_name,last_name,height_feet,height_inches,weight_pounds,position,team_name,conference_name
+Id:15,First Name:Giannis,Last Name:Antetokounmpo,Height-Feet:6,Height-Inches:11,Weight-lbs:242,Position:F,Team Name:Milwaukee Bucks,Conference Name:East
+Id:140,First Name:Kevin,Last Name:Durant,Height-Feet:6,Height-Inches:9,Weight-lbs:240,Position:F,Team Name:Brooklyn Nets,Conference Name:East
+Id:115,First Name:Stephen,Last Name:Curry,Height-Feet:6,Height-Inches:3,Weight-lbs:190,Position:G,Team Name:Golden State Warriors,Conference Name:West
+Id:246,First Name:Nikola,Last Name:Jokic,Height-Feet:7,Height-Inches:0,Weight-lbs:250,Position:C,Team Name:Denver Nuggets,Conference Name:West
+Id:145,First Name:Joel,Last Name:Embiid,Height-Feet:7,Height-Inches:0,Weight-lbs:250,Position:F-C,Team Name:Philadelphia 76ers,Conference Name:East
+Id:434,First Name:Jayson,Last Name:Tatum,Height-Feet:6,Height-Inches:8,Weight-lbs:208,Position:F,Team Name:Boston Celtics,Conference Name:East
+Id:132,First Name:Luka,Last Name:Doncic,Height-Feet:6,Height-Inches:7,Weight-lbs:218,Position:F-G,Team Name:Dallas Mavericks,Conference Name:West
+Id:237,First Name:LeBron,Last Name:James,Height-Feet:6,Height-Inches:8,Weight-lbs:250,Position:F,Team Name:Los Angeles Lakers,Conference Name:West
+Id:274,First Name:Kawhi,Last Name:Leonard,Height-Feet:6,Height-Inches:7,Weight-lbs:230,Position:F,Team Name:LA Clippers,Conference Name:West
+Id:666786,First Name:Ja,Last Name:Morant,Height-Feet:None,Height-Inches:None,Weight-lbs:None,Position:G,Team Name:Memphis Grizzlies,Conference Name:West
+Id:57,First Name:Devin,Last Name:Booker,Height-Feet:6,Height-Inches:6,Weight-lbs:210,Position:G,Team Name:Phoenix Suns,Conference Name:West
+Id:79,First Name:Jimmy,Last Name:Butler,Height-Feet:6,Height-Inches:8,Weight-lbs:232,Position:G-F,Team Name:Miami Heat,Conference Name:East
+Id:192,First Name:James,Last Name:Harden,Height-Feet:6,Height-Inches:5,Weight-lbs:220,Position:G,Team Name:Philadelphia 76ers,Conference Name:East
+Id:447,First Name:Karl-Anthony,Last Name:Towns,Height-Feet:7,Height-Inches:0,Weight-lbs:248,Position:C,Team Name:Minnesota Timberwolves,Conference Name:West
+Id:490,First Name:Trae,Last Name:Young,Height-Feet:6,Height-Inches:2,Weight-lbs:180,Position:G,Team Name:Atlanta Hawks,Conference Name:East
+Id:117,First Name:Anthony,Last Name:Davis,Height-Feet:6,Height-Inches:10,Weight-lbs:253,Position:F-C,Team Name:Los Angeles Lakers,Conference Name:West
+Id:322,First Name:Donovan,Last Name:Mitchell,Height-Feet:6,Height-Inches:3,Weight-lbs:215,Position:G,Team Name:Utah Jazz,Conference Name:West
+Id:278,First Name:Damian,Last Name:Lillard,Height-Feet:6,Height-Inches:3,Weight-lbs:195,Position:G,Team Name:Portland Trail Blazers,Conference Name:West
+Id:37,First Name:Bradley,Last Name:Beal,Height-Feet:6,Height-Inches:5,Weight-lbs:207,Position:G,Team Name:Washington Wizards,Conference Name:East
+Id:172,First Name:Paul,Last Name:George,Height-Feet:6,Height-Inches:9,Weight-lbs:220,Position:F,Team Name:LA Clippers,Conference Name:West
