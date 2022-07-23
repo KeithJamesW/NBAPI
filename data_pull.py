@@ -26,7 +26,7 @@ def request(url, headers, method='GET'):
   try:
     r = requests.request(method=method, headers=headers, url=url)
     if r.status_code == 200:
-      r.status_message = OK
+      r.status_message = "OK"
       return r.json()
     else:
       return {'error_status': r.status_code, 'error_message': r.text}
