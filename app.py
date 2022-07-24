@@ -53,8 +53,9 @@ def db_read():
     print(listed_results)
     
     
-    return render_template("players.html", player_ids=player_ids, result=result, results1=results1, results2=results2, listed_results=listed_results, total_results= zip(result, results1, player_ids, results2)), str(result) 
-
+    
+    return render_template("", "200 OK", "players.html", player_ids=player_ids, result=result, results1=results1, results2=results2, listed_results=listed_results, total_results= zip(result, results1, player_ids, results2))  
+   
 
 
 
