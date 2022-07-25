@@ -25,6 +25,8 @@ cursor = conn.cursor()
 
 
 
+
+
 @app.route('/', methods=['GET'])
 def home():
        
@@ -52,9 +54,11 @@ def db_read():
     listed_results = list(total_results)
     print(listed_results)
     
+
+   
     
     
-    return render_template("", "200 OK", "players.html", player_ids=player_ids, result=result, results1=results1, results2=results2, listed_results=listed_results, total_results= zip(result, results1, player_ids, results2))  
+    return render_template("players.html",  player_ids=player_ids, result=result, results1=results1, results2=results2, listed_results=listed_results, total_results= zip(result, results1, player_ids, results2))  
    
 
 
