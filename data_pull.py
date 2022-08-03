@@ -46,6 +46,21 @@ def request_stats(url, method='GET'):
     return {'error_status': 500, 'error_message': str(e)}
 
 
+def request_picture_id(url, method='GET'):
+  try:
+    r = requests.request(method=method, url=url)
+    if r.status_code == 200:
+      r.status_message = "OK"
+      return r.json()
+    else:
+      return {'error_status': r.status_code, 'error_message': r.text}
+  except Exception as e:
+    return {'error_status': 500, 'error_message': str(e)}
+
+
+
+
+
 def parse_data(response, player_name):
   if not response or not response.get('data'):
     print(f'API error - empty results for {player_name}.')
@@ -66,13 +81,27 @@ def parse_stats_data(response, player_individual_id):
   return response['data']
 
 
+def parse_picture_data(response, player_name):
+  if not response or not response.get('data'):
+    print(f'API error - empty results for {player_name}.')
+    return
+  if response.get('error_status'):
+    print(f'API error - for {player_name}, error message: {response["error_message"]}, error status: {response["error_status"]}.')
+    return
+  return response['data']
+
+
 player_individual_ids = []
+player_first_names = []
+player_last_names = []
 def insert_query_for_nba_players_table(data):
   
   individual_id = data['id']
   player_individual_ids.append(individual_id)
   player_firstname = data['first_name']
+  player_first_names.append(player_firstname)
   player_lastname = data['last_name']
+  player_last_names.append(player_lastname)
   player_height_feet = data['height_feet']
   player_height_inches = data['height_inches']
   player_weight_pounds = data['weight_pounds']
@@ -108,8 +137,14 @@ def insert_query_for_nba_player_stats_table(data):
   return nba_stats_insert_query
 
 
+def insert_query_for_nba_player_photo_id(data):
 
+  player_first_name = data["firstName"]
+  player_last_name = data["lastName"]
+  player_photo_id = data["personId"]
+  nba_photo_insert_query = f"INSERT INTO photo_info(player_first_name, player_last_name, player_photo_id) VALUES('{player_first_name}', {player_last_name}, {player_photo_id})"
 
+  return nba_photo_insert_query
 
 def pull_data_from_api():
   
@@ -144,6 +179,27 @@ def pull_data_from_api():
 
 
 def pull_stats_data_from_api():
+
+  insert_queries_dict = dict()
+  n = len(player_ids)
+
+
+  for idx, player_individual_id in enumerate(player_individual_ids):
+    insert_queries_dict[player_individual_id] = dict()
+    url = f"https://www.balldontlie.io/api/v1/season_averages?player_ids[]={player_individual_id}"
+    response = request_stats(url)
+    
+    data = parse_stats_data(response=response, player_individual_id=player_individual_id)
+    if data:
+
+      nba_stats_insert_query = insert_query_for_nba_player_stats_table(data)
+      insert_queries_dict[player_individual_id]['nba_stats_insert_query'] = nba_stats_insert_query
+      print(f'({idx+1}/{n}) Processed insert query for {player_individual_id}...')
+  
+  return insert_queries_dict
+
+
+def pull_photo_data_from_api():
 
   insert_queries_dict = dict()
   n = len(player_ids)

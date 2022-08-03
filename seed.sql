@@ -31,7 +31,7 @@ CREATE TABLE nba_players
     height_inches VARCHAR, 
     weight VARCHAR,
     position TEXT NOT NULL,
-    player_photoid VARCHAR
+    
    
     );
 
@@ -47,6 +47,14 @@ CREATE TABLE player_game_stats
 );
 
 
+CREATE TABLE photo_info
+(
+    id SERIAL PRIMARY KEY,
+    player_first_name TEXT NOT NULL,
+    player_last_name TEXT NOT NULL,
+    player_photo_id VARCHAR
+
+);
 
 
    
