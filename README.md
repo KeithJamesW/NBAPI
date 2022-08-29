@@ -17,15 +17,17 @@ A Flask app that renders twenty card elements featuring the top twenty players i
 
 
 Homepage:
-https://github.com/KeithJamesW/NBAPI/blob/main/img/NBAPIHomepage.jpg
+![](https://github.com/KeithJamesW/NBAPI/blob/main/img/NBAPIHomepage.jpg)
 
 
 Card Display Page:
-https://github.com/KeithJamesW/NBAPI/blob/main/img/NBAPICardPage.jpg
+![](https://github.com/KeithJamesW/NBAPI/blob/main/img/NBAPICardPage.jpg)
 
 
 Card Rotation:
-https://github.com/KeithJamesW/NBAPI/blob/main/img/NBAPICardRotation.jpg
+![](https://github.com/KeithJamesW/NBAPI/blob/main/img/NBAPICardRotation.jpg)
+
+
 ## Installation
 
 Prior to installing the project's dependencies, setup a virtual environment in order to avoid installing globally. To do this, enter the following commands:
